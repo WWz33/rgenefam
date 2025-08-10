@@ -11,7 +11,7 @@ hmm_search <- function(
   args <- c("--cut_tc","--domtblout", domtblout_file,
             "-o", hmmout_file, pfam, query_fa)
 
-  system2("hmmsearch", args = args,stdout = T)
+  system2("hmmsearch", args = args, stdout = T)
 
   domtblout <- read.table(file = domtblout_file, skip = "#") %>%
     dplyr::filter(V7 < threshold)
