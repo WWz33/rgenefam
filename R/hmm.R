@@ -53,16 +53,7 @@ hmm_search <- function(
 new_test <- hmm_search(mode = "trim",pfam = "~/genefam/hmm/PF00759.hmm",query_fa = "~/genefam/genome/wm82_a4/Gmax_508_Wm82.a4.v1.protein_primaryTranscriptOnly.fa",prefix = "test",outdir = "~/genefam/test/")
 test <- hmm_search(mode = "raw",pfam = "~/genefam/hmm/PF00759.hmm",query_fa = "~/genefam/genome/wm82_a4/Gmax_508_Wm82.a4.v1.protein_primaryTranscriptOnly.fa",prefix = "test",outdir = "~/genefam/test/")
 
-diff_seq_count <- function(a = NULL, b = NULL){
-  a_set <- names(a)
-  b_set <- names(b)
-  a_uniq <- a_set[!a_set %in% b_set]
-  b_uniq <- b_set[!b_set %in% a_set]
-  diff_summary <- list(a_uniq = a_uniq, b_uniq = b_uniq)
-  return(diff_summary)
-}
 
-sumy <- diff_seq_count(test, new_test)
 
 
 

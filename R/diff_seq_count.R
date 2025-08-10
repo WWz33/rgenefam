@@ -6,3 +6,5 @@ diff_seq_count <- function(a = NULL, b = NULL){
   diff_summary <- list(a_uniq = a_uniq, b_uniq = b_uniq)
   return(diff_summary)
 }
+
+sumy <- diff_seq_count(test, new_test)
